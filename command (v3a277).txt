@@ -1,0 +1,13 @@
+P="C:/Users/cholh/OneDrive/문서/PowerShell/profile.ps1"; cp "$P" "$P.bak" && cat >> "$P" <<'EOF'
+
+# Streamlit 앱 실행 단축 명령: 프로젝트 폴더에서 `run` 입력
+function run {
+    if (-not (Test-Path ".\app.py")) {
+        Write-Host "현재 폴더에 app.py가 없습니다. 프로젝트 폴더로 이동한 뒤 실행하세요." -ForegroundColor Yellow
+        return
+    }
+    conda activate project_env
+    streamlit run app.py
+}
+EOF
+pwsh -NoLogo -Command "Set-Location C:/Users/cholh/GitHub/oop-commercial-analysis; (Get-Command run).CommandType; conda activate project_env; `$env:CONDA_DEFAULT_ENV; (Get-Command streamlit).Source"
