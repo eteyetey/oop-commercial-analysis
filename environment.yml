@@ -5,13 +5,10 @@ dependencies:
   - bzip2=1.0.8
   - ca-certificates=2025.7.15
   - expat=2.7.1
-  - libcxx=19.1.7
   - libffi=3.4.4
-  - ncurses=6.5
   - openssl=3.0.17
   - pip=26.2.1
   - python=3.11.13
-  - readline=8.3
   - setuptools=78.1.1
   - sqlite=3.50.2
   - tk=8.6.15
@@ -56,4 +53,3 @@ dependencies:
       - urllib3==2.8.0
       - uvicorn==0.54.0
       - websockets==16.1.1
-prefix: /opt/anaconda3/envs/project_env
